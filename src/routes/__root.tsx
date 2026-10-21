@@ -24,9 +24,15 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Uniform + TanStack Start" },
+      { title: "Uniform Connect · Down for maintenance" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&display=swap",
+      },
       { rel: "stylesheet", href: indexCss },
       { rel: "stylesheet", href: appCss },
     ],
@@ -51,7 +57,6 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <HeadContent />
       </head>
       <body>
-        {/* #root wrapper keeps the App.css layout styles (centering, padding). */}
         <div id="root">{children}</div>
         <Scripts />
       </body>
